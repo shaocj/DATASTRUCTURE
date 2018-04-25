@@ -123,3 +123,64 @@
  ![image](https://github.com/shaocj/DATASTRUCTURE/blob/master/own/image/16.png)
  
 　"部分匹配"的实质是，有时候，字符串头部和尾部会有重复。比如，"ABCDAB"之中有两个"AB"，那么它的"部分匹配值"就是2（"AB"的长度）。搜索词移动的时候，第一个"AB"向后移动4位（字符串长度-部分匹配值），就可以来到第二个"AB"的位置。
+ void kmpPrefixFunction(char *p,int length,int *prefix)
+{
+    prefix[0]=0;
+    int k = 0;//前缀的长度
+    int i;
+    for( i=1; i<length; i++)
+    {
+        while(k>0&&p[k]!=p[i])
+        {
+            k=prefix[k-1];
+        }
+        if(p[k]==p[i])//说明p[0...k-1]共k个都匹配了
+        {
+            k=k+1;
+        }
+        prefix[i]=k;
+    }
+}
+
+void kmpMatch(char * s,int sLength,char * p,int pLength,int *prefix)
+{
+    int pPoint=0;
+    int i;
+    for( i=0; i<=sLength-pLength;i++)
+    {
+
+
+        while(pPoint!=0&&(s[i]!=p[pPoint]))
+        {
+            pPoint = prefix[pPoint-1];
+        }
+        if(s[i]==p[pPoint])
+        {
+            pPoint++;
+            if(pPoint == pLength)
+            {
+                printf("找到:%d \n",i-pPoint+1);
+                //pPoint = 0;//上一个在s匹配的字符串,不能成为下一个匹配字符串的一部分
+                pPoint=prefix[pPoint-1];//上一个在s匹配的字符串,也能成为下一个匹配字符串的一部分
+            }
+        }
+
+
+    }
+}
+//朴素匹配
+void normal_match(char * s,int sLength,char * p,int pLength){
+    int k;
+    int i;
+    for(i=0;i<sLength-pLength+1;i++){
+        for(k=0;k<pLength;k++){
+            if(s[i+k]!=p[k]){
+                break;
+            }
+        }
+        if(k==pLength){
+            printf("找到:%d \n",i);
+        }
+
+    }
+}
