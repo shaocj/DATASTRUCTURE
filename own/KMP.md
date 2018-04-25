@@ -1,6 +1,7 @@
 字符串匹配的KMP算法
-举例来说，有一个字符串"BBC ABCDAB ABCDABCDABDE"，我想知道，里面是否包含另一个字符串"ABCDABD"？
+    举例来说，有一个字符串"BBC ABCDAB ABCDABCDABDE"，我想知道，里面是否包含另一个字符串"ABCDABD"？
 　
+ 
  1.
  
  ![image](https://github.com/shaocj/DATASTRUCTURE/blob/master/own/image/1.png)
