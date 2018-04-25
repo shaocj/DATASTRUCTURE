@@ -7,20 +7,39 @@
  ![image](https://github.com/shaocj/DATASTRUCTURE/blob/master/own/image/1.png)
  
 首先，字符串"BBC ABCDAB ABCDABCDABDE"的第一个字符与搜索词"ABCDABD"的第一个字符，进行比较。因为B与A不匹配，所以搜索词后移一位。
+
+
 　2.
  
+ ![image](https://github.com/shaocj/DATASTRUCTURE/blob/master/own/image/2.png)
+ 
 因为B与A不匹配，搜索词再往后移。
+
+
 3.
  
+ ![image](https://github.com/shaocj/DATASTRUCTURE/blob/master/own/image/3.png)
+ 
 就这样，直到字符串有一个字符，与搜索词的第一个字符相同为止。
+
+
 4.
  
+ ![image](https://github.com/shaocj/DATASTRUCTURE/blob/master/own/image/4.png)
+ 
 接着比较字符串和搜索词的下一个字符，还是相同。
+
+
 5.
  
-直到字符串有一个字符，与搜索词对应的字符不相同为止。
-6.
+ ![image](https://github.com/shaocj/DATASTRUCTURE/blob/master/own/image/5.png)
  
+直到字符串有一个字符，与搜索词对应的字符不相同为止。
+
+
+6.
+
+ ![image](https://github.com/shaocj/DATASTRUCTURE/blob/master/own/image/6.png)
 这时，最自然的反应是，将搜索词整个后移一位，再从头逐个比较。这样做虽然可行，但是效率很差，因为你要把"搜索位置"移到已经比较过的位置，重比一遍。
 7.
  
