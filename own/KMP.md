@@ -1,7 +1,7 @@
 字符串匹配的KMP算法
 举例来说，有一个字符串"BBC ABCDAB ABCDABCDABDE"，我想知道，里面是否包含另一个字符串"ABCDABD"？
 　1.
- 
+ ![image](https://github.com/shaocj/DATASTRUCTURE/blob/master/own/image/1.png)
 首先，字符串"BBC ABCDAB ABCDABCDABDE"的第一个字符与搜索词"ABCDABD"的第一个字符，进行比较。因为B与A不匹配，所以搜索词后移一位。
 　2.
  
