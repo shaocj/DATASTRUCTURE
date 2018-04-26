@@ -131,7 +131,11 @@
  void kmpPrefixFunction(char *p,int length,int *prefix)
 {
     prefix[0]=0;
+    
+    
     int k = 0;//前缀的长度
+    
+    
     int i;
     for( i=1; i<length; i++)
     {
@@ -139,7 +143,10 @@
         {
             k=prefix[k-1];
         }
+        
         if(p[k]==p[i])//说明p[0...k-1]共k个都匹配了
+        
+        
         {
             k=k+1;
         }
