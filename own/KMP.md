@@ -122,7 +122,10 @@
  
  ![image](https://github.com/shaocj/DATASTRUCTURE/blob/master/own/image/16.png)
  
+ 
 　"部分匹配"的实质是，有时候，字符串头部和尾部会有重复。比如，"ABCDAB"之中有两个"AB"，那么它的"部分匹配值"就是2（"AB"的长度）。搜索词移动的时候，第一个"AB"向后移动4位（字符串长度-部分匹配值），就可以来到第二个"AB"的位置。
+ 
+ 
  
  
  void kmpPrefixFunction(char *p,int length,int *prefix)
@@ -143,6 +146,8 @@
         prefix[i]=k;
     }
 }
+
+
 
 
 
@@ -195,6 +200,7 @@ void normal_match(char * s,int sLength,char * p,int pLength){
 
 
 //大话数据
+https://www.cnblogs.com/yjiyjige/p/3263858.html
 
 
 
