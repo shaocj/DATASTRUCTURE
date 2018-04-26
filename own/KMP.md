@@ -162,6 +162,7 @@
 
 void kmpMatch(char * s,int sLength,char * p,int pLength,int *prefix)
 {
+
     int pPoint=0;
     
     int i;
