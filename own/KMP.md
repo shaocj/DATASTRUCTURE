@@ -129,7 +129,9 @@
  
  
  void kmpPrefixFunction(char *p,int length,int *prefix)
+ 
 {
+
     prefix[0]=0;
     
     
@@ -190,7 +192,9 @@ void kmpMatch(char * s,int sLength,char * p,int pLength,int *prefix)
 
 
 void normal_match(char * s,int sLength,char * p,int pLength){
+
     int k;
+    
     int i;
     for(i=0;i<sLength-pLength+1;i++){
         for(k=0;k<pLength;k++){
