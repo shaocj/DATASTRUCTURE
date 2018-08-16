@@ -216,6 +216,8 @@ void normal_match(char * s,int sLength,char * p,int pLength){
 
 //大话数据
 https://www.cnblogs.com/yjiyjige/p/3263858.html
+https://blog.csdn.net/v_july_v/article/details/7041827
+
 
 
 
